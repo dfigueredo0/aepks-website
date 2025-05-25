@@ -1,0 +1,25 @@
+.letters {
+  color: #c5a028;
+}
+
+.rights {
+  color: #f6f6f6;
+}
+
+.icon {
+  color: #f6f6f6;
+}
+
+.footerquicklink {
+  color: #f6f6f6;
+}
+
+.footercontact {
+  color: #f6f6f6;
+}
+
+.no-bullets {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}

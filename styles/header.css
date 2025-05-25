@@ -1,0 +1,16 @@
+/*
+* Should be ready haven't tested and would need to change colors
+*/
+.navbar {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: whitesmoke;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(206, 206, 206);
+}
