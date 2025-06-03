@@ -1,25 +1,49 @@
-.letters {
+* {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.4;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+.heading {
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  line-height: 4.2rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+}
+
+.details p {
+  font-size: 1.4rem;
+  line-height: 1.96rem;
+}
+
+.details p strong {
   color: #c5a028;
+  font-weight: 700;
 }
 
-.rights {
-  color: #f6f6f6;
-}
-
-.icon {
-  color: #f6f6f6;
-}
-
-.footerquicklink {
-  color: #f6f6f6;
-}
-
-.footercontact {
-  color: #f6f6f6;
-}
-
-.no-bullets {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
+@font-face {
+  font-family: 'Noto Sans', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 }
