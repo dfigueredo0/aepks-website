@@ -1,3 +1,19 @@
+.brother-overlay {
+  position: relative;
+  top: -10rem;
+  padding: 2rem 4rem;
+  text-align: center;
+}
+
+.bg-2 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: url(../img/pinning_2023.png) center center / cover
+  no-repeat;
+  z-index: 1,
+}
+
 .officers li {
     display: flex;
     flex-direction: column;
