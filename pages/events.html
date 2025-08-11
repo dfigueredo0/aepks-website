@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/assets/recruitment/recruitment-trail.css">
+<div id="recruitment-trail"></div>
+<script src="/assets/recruitment/recruitment-trail.iife.js"></script>
+<script>
+  const EVENTS = [
+    { id:"taste", name:"Taste of the Quad", description:"Pigs in a blanket…", location:"Quad Lawn", type:"info" },
+    { id:"cellist", name:"Live Cellist", description:"Chill set, meet brothers.", location:"Amphitheater", type:"info" },
+    { id:"darts", name:"Darts Tournament", description:"Hit ≥25 to proceed.", location:"Rec Center", type:"minigame", minigame:"darts" },
+    { id:"zoo", name:"Petting Zoo", description:"Sloth, goat, bunnies, duck, chicken, tegu.", location:"East Green", type:"info" },
+    { id:"fair", name:"Mini County Fair", description:"Shooting gallery & horseshoes.", location:"Intramural Fields", type:"info" },
+    { id:"last", name:"The Last Stop", description:"Enter the house.", location:"123 Greek Row", type:"info" }
+  ];
+
+  // pass lat/lon to show real weather
+  RecruitmentTrail.mount(document.getElementById("recruitment-trail"), {
+    events: EVENTS,
+    lat: 40.001, lon: -83.016, // <-- your campus coords
+    sprites: {
+      sky: "/assets/recruitment/sprites/sky.png",
+      grass: "/assets/recruitment/sprites/grass.png",
+      ground: "/assets/recruitment/sprites/ground.png",
+      river: "/assets/recruitment/sprites/river.png",
+      wagon: "/assets/recruitment/sprites/wagon.png",
+      ox: "/assets/recruitment/sprites/ox.png",
+    },
+    // dateText: "April 4, 1848", // if you want the exact retro date
+  });
+</script>

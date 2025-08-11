@@ -1,30 +1,28 @@
 const execPositions = ['Alpha', 'Beta', 'Pi', 'Iota', 'Sigma', 'Tau', 'Chi'];
 
-let year = new Date().getFullYear();
+const year = new Date().getFullYear();
 
 async function load() {
   try {
     const response = await fetch(`../data/brothers_${year}.json`);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const data = await response.json();
-    const roster = data.actives;
+    const { actives: roster } = await response.json();
 
     const execList = document.getElementById('exec-list');
     const otherList = document.getElementById('other-list');
 
     const positionMap = {};
 
-    roster.forEach((person) => {
-      person.positions.forEach((position) => {
-        if (!positionMap[position]) positionMap[position] = [];
-        positionMap[position].push(person);
+    roster.forEach(person => {
+      (person.positions || []).forEach(position => {
+        (positionMap[position] ||= []).push(person);
       });
     });
 
-    Object.keys(positionMap).forEach((position) => {
-      positionMap[position].forEach((person) => {
+    Object.keys(positionMap).forEach(position => {
+      positionMap[position].forEach(person => {
+        const fullName = `${person.name} ${person.lastname}`.trim();
         const li = document.createElement('li');
-        const fullName = `${person.name} ${person.lastname}`;
         li.innerHTML = `
       ${
         person.hasImg === 'true'
@@ -33,7 +31,7 @@ async function load() {
       }
       <h3 class="heading">${position}</h3>
       <p>${fullName}</p>
-      <p>${person.major}</p>
+      <p>${person.major || ''}</p>
     `;
 
         if (execPositions.includes(position)) {
