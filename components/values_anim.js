@@ -1,24 +1,23 @@
-const numbers = document.querySelectorAll('.numbers li');
-const labels = document.querySelectorAll('.labels li');
-const details = document.querySelectorAll('.details div');
-
-let index = 0;
-
-function highlight(index) {
-  numbers.forEach((el, i) => {
-    el.style.color = i === index ? '#c5a028' : '#897437';
-  });
-  labels.forEach((el, i) => {
-    el.style.color = i === index ? '#f8f7f4' : '#585858';
-  });
-  details.forEach((el, i) => {
-    el.classList.toggle('active', i === index);
-  });
+function onReady(fn) {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fn, { once: true });
+  } else {
+    fn();
+  }
 }
 
-highlight(index);
+onReady(() => {
+  const numbers = document.querySelectorAll('.numbers li');
+  const labels = document.querySelectorAll('.labels li');
+  const details = document.querySelectorAll('.details > div');
+  if (!numbers.length || !labels.length || !details.length) return;
 
-setInterval(() => {
-  index = (index + 1) % numbers.length;
+  let index = 0;
+  function highlight(i) {
+    numbers.forEach((el, k) => { el.style.color = k === i ? '#c5a028' : '#897437'; });
+    labels.forEach((el, k) => { el.style.color = k === i ? '#f8f7f4' : '#585858'; });
+    details.forEach((el, k) => { el.classList.toggle('active', k === i); });
+  }
   highlight(index);
-}, 3000);
+  setInterval(() => { index = (index + 1) % numbers.length; highlight(index); }, 3000);
+});
