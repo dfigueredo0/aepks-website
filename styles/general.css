@@ -7,17 +7,20 @@ body {
 }
 
 .hero {
-  height: 65vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+  text-align: center;
 }
 
 .hero-overlay {
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid #f8f7f4;
-  padding: 2rem 4rem;
+  padding: 1rem;
   text-align: center;
   backdrop-filter: blur(4px);
 }
@@ -50,7 +53,7 @@ li {
 }
 
 .heading {
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 700;
   text-align: center;
   margin-bottom: 1rem;
@@ -61,8 +64,8 @@ li {
 }
 
 .objects {
-  padding: 40px 0;
-  margin: 85px;
+  padding: 20px 0;
+  margin: 20px 10px;
   border-top: 3px solid #e2eaff;
   border-bottom: 3px solid #e2eaff;
 }
@@ -71,15 +74,16 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .crest {
-  max-width: 300px;
+  max-width: 150px;
   height: auto;
   flex-shrink: 0;
 }
@@ -88,7 +92,8 @@ li {
   display: flex;
   gap: 20px;
   align-items: flex-start;
-  padding: 40px;
+  padding: 20px;
+  flex-direction: column;
 }
 
 .core-values ul {
@@ -99,7 +104,7 @@ li {
 
 .numbers li,
 .labels li {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #897437;
   transition: color 0.8s ease-in-out;
   margin: 10px 0;
@@ -115,7 +120,7 @@ li {
 }
 
 .details {
-  margin-left: 30px;
+  margin-left: 0;
   position: relative;
 }
 
@@ -146,7 +151,7 @@ li {
 }
 
 .events .container {
-  flex: 0 1 300px;
+  flex: 0 1 250px;
   height: auto;
   aspect-ratio: 1 / 1;
   position: relative;
@@ -171,9 +176,9 @@ li {
 }
 
 .events .card .front-content p {
-  font-size: 32px;
+  font-size: 20px;
+  line-height: 1.2;
   font-weight: 700;
-  line-height: 44.8px;
   opacity: 1;
   background: linear-gradient(-45deg, #d2b34a 0%, #c5a028 100%);
   background-clip: text;
@@ -195,7 +200,7 @@ li {
   text-align: center;
   background: linear-gradient(-45deg, #d2b34a 0%, #c5a028 100%);
   color: #f8f7f4;
-  padding: 0px;
+  padding: 0;
   line-height: 1.5;
   border-radius: 5px;
   pointer-events: none;
@@ -204,18 +209,16 @@ li {
 }
 
 .events .card .content .heading {
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 700;
 }
 
 .events .card:hover .content {
   transform: translateY(0);
 }
-
 .events .card:hover .front-content {
   transform: translateY(-30%);
 }
-
 .events .card:hover .front-content p {
   opacity: 0;
 }
@@ -224,16 +227,17 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 1.5rem;
+  padding: 1.5rem;
 }
 
 .news-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   width: 100%;
+  flex-direction: column;
 }
 
 .news .card {
@@ -265,16 +269,13 @@ li {
   border-radius: 0.5rem 0.5rem 0 0;
   margin-bottom: -0.5rem;
 }
-
 .sub-card.named {
   border-radius: 0 0 0.5rem 0.5rem;
   margin-top: -0.5rem;
 }
-
 .card:hover .sub-card.category {
   transform: translateY(100%);
 }
-
 .card:hover .sub-card.named {
   transform: translateY(-100%);
 }
@@ -289,11 +290,16 @@ li {
 .news .card-container {
   position: relative;
   z-index: 5;
-  width: 17rem;
-  height: 14rem;
+  width: 100%;
+  height: auto; /* mobile fills width */
   background-color: #f8f7f4;
   border-radius: 0.5rem;
   overflow: hidden;
+}
+
+.news .card-container::before,
+.news .card-container::after {
+  transition: all 1s cubic-bezier(1, 0, 0, 1);
 }
 
 .news .card-container::before {
@@ -303,50 +309,38 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: 0rem;
   aspect-ratio: 1;
-  background-color: hsl(0, 0%, 13%, 0.3);
-
+  background-color: hsl(0 0% 13% / 0.3);
   border-radius: 50%;
   transform-origin: center;
-
-  transition: all 1s cubic-bezier(1, 0, 0, 1) 0.2s;
 }
 
 .news .card-container::after {
   content: 'See more';
-
   position: absolute;
   z-index: 10;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 0rem;
   box-sizing: border-box;
   width: 0rem;
   aspect-ratio: 1;
-  background-color: hsl(0, 0%, 13%, 0.7);
-
+  background-color: hsl(0 0% 13% / 0.7);
   font-size: 0rem;
   font-weight: bold;
   color: #f8f7f4;
-
   border-radius: 50%;
   transform-origin: center;
-
-  transition: all 1s cubic-bezier(1, 0, 0, 1) 0s;
 }
 
 .card:hover .card-container::before {
   width: 22rem;
 }
-
 .card:hover .card-container::after {
   width: 5rem;
   font-size: 0.75rem;
@@ -368,7 +362,6 @@ li {
   color: inherit;
   display: inline-block;
 }
-
 .card-link .card:hover {
   transform: scale(1.02);
 }
@@ -381,13 +374,12 @@ li {
   padding: 40px 20px;
   gap: 20px;
 }
-
 .faq .card {
   background-image: linear-gradient(#222222, #222222),
     linear-gradient(71deg, #222222, #c5a028, #222222);
   border-radius: 20px;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  max-width: 100%;
   overflow: visible;
   transition: border 0.3s ease, box-shadow 0.3 ease;
   border: 2px solid transparent;
@@ -396,22 +388,18 @@ li {
 .faq .card[open] {
   border: 2px solid #c5a028;
 }
-
 .faq summary {
   position: relative;
   display: flex;
   align-items: center;
   list-style: none;
-  padding: 20px 30px;
+  padding: 15px;
   cursor: pointer;
-  display: flex;
   justify-content: space-between;
 }
-
 .faq summary::-webkit-details-marker {
   display: none;
 }
-
 .faq summary span {
   flex: 1;
   text-align: left;
@@ -437,7 +425,6 @@ li {
   transition: all 0.3s ease;
   z-index: 2;
 }
-
 .faq .card[open] summary::after {
   content: '\00D7';
   background-color: #c5a028;
@@ -455,9 +442,8 @@ li {
 .contact-us {
   text-align: center;
 }
-
 .contact-us input {
-  width: 65%;
+  width: 100%;
   border-style: none none none;
   border-bottom: 2px solid #e2eaff;
   height: 48px;
@@ -465,13 +451,13 @@ li {
   padding: 0.75rem;
   background-color: transparent;
   color: #acabaa;
+  font-size: 14px;
 }
-
 .contact-us .submit-btn {
-  width: 25%;
+  width: 100%;
   border-radius: 8px;
   height: 48px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   margin-top: 25px;
   margin-bottom: 75px;
@@ -485,7 +471,6 @@ li {
   line-height: 0;
   transform: rotate(180deg);
 }
-
 .wave-divider svg {
   display: block;
   width: 120%;
@@ -498,4 +483,149 @@ li {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Scale up: small phones / phablets ===== */
+@media (min-width: 480px) {
+  .hero-overlay {
+    padding: 1.25rem 1.5rem;
+  }
+  .heading {
+    font-size: 24px;
+  }
+  .crest {
+    max-width: 180px;
+  }
+  .numbers li,
+  .labels li {
+    font-size: 1.1rem;
+  }
+  .news {
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
+
+/* ===== Tablets & small laptops ===== */
+@media (min-width: 768px) {
+  .hero {
+    height: 65vh;
+    flex-direction: row;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .hero-overlay {
+    padding: 1.5rem 2rem;
+  }
+
+  .objects {
+    margin: 40px 20px;
+    padding: 20px 0;
+  }
+
+  .objects .container {
+    gap: 40px;
+    flex-direction: row;
+  }
+
+  .crest {
+    max-width: 300px;
+  }
+
+  .core-values {
+    flex-direction: row;
+    padding: 40px;
+  }
+
+  .numbers li,
+  .labels li {
+    font-size: 1.2rem;
+  }
+
+  .events .container {
+    flex: 0 1 300px;
+  }
+
+  .events .card .front-content p,
+  .events .card .content .heading {
+    font-size: 32px;
+    line-height: 44.8px;
+  }
+
+  .news-container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .news .card-container {
+    width: 17rem;
+    height: 14rem;
+  }
+
+  .faq .card {
+    max-width: 600px;
+  }
+
+  .contact-us input {
+    width: 65%;
+    font-size: 1rem;
+  }
+  .contact-us .submit-btn {
+    width: 25%;
+    font-size: 18px;
+  }
+}
+
+/* ===== Ultrawide / large desktops ===== */
+@media (min-width: 1440px) {
+  .hero {
+    height: 80vh;
+    padding: 0 5rem;
+  }
+  .hero-overlay {
+    padding: 3rem 6rem;
+  }
+  .heading {
+    font-size: 40px;
+  }
+
+  .objects .container {
+    gap: 60px;
+    max-width: 1400px;
+  }
+  .crest {
+    max-width: 400px;
+  }
+
+  .numbers li,
+  .labels li {
+    font-size: 2rem;
+  }
+
+  .events .container {
+    flex: 0 1 350px;
+  }
+  .events .card .front-content p {
+    font-size: 40px;
+    line-height: 56px;
+  }
+  .events .card .content .heading {
+    font-size: 40px;
+  }
+
+  .news .card-container {
+    width: 20rem;
+    height: 16rem;
+  }
+
+  .faq .card {
+    max-width: 800px;
+  }
+
+  .contact-us input {
+    width: 50%;
+  }
+  .contact-us .submit-btn {
+    width: 20%;
+  }
 }
