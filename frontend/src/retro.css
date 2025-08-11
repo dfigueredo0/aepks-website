@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 :root { --hud-bg:#fff; --hud-fg:#000; }
+
 .retro {
   font-family: "Press Start 2P", system-ui, monospace;
   image-rendering: pixelated;
 }
+
 .hud {
   position: fixed; left: 0; right: 0; bottom: 0;
   background: var(--hud-bg); color: var(--hud-fg);
@@ -14,4 +16,17 @@
 .hud .grid { display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap:6px; }
 @media (min-width: 720px){ .hud { font-size: 14px; }.hud .grid{grid-template-columns: repeat(4,1fr);} }
 .fullscreen { position: fixed; inset:0; background:#3aa13a; }
-.btn { position: fixed; top: 12px; right: 12px; border:3px solid #000; background:#fff; padding:6px 10px; }
+.btn {
+  position: fixed;
+  z-index: 10;
+  top: 12px;
+  border: 3px solid #000;
+  background: #fff;
+  padding: 6px 10px;
+  display: inline-block; 
+  width: auto;              
+  white-space: nowrap;     
+}
+.btn-right { right: 12px; }       
+.btn-home  { left: 12px; }  
+.btn:active { transform: translateY(1px); }

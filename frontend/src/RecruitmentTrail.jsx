@@ -7,9 +7,9 @@ async function getWeather({ lat, lon }) {
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code`;
     const r = await fetch(url);
     const j = await r.json();
-    const t = Math.round(j?.current?.temperature_2m ?? NaN);
+    const temperature = Math.round(j?.current?.temperature_2m ?? NaN);
     const label = Number.isFinite(t)
-      ? t >= 85 ? "hot" : t >= 65 ? "warm" : t >= 45 ? "cool" : "cold"
+      ? temperature >= 85 ? "hot" : temperature >= 65 ? "warm" : temperature >= 45 ? "cool" : "cold"
       : "fair";
     return Number.isFinite(t) ? `${label} (${t}°)` : label;
   } catch {
@@ -29,7 +29,8 @@ export default function RecruitmentTrail({
   },
   lat = null,
   lon = null,
-  dateText, // optional override like "April 4, 1848"
+  dateText,
+  homeHref = "/",
 }) {
   const canvasRef = useRef(null);
   const [idx, setIdx] = useState(0);
@@ -139,7 +140,8 @@ export default function RecruitmentTrail({
   return (
     <div className="fullscreen retro">
       <canvas ref={canvasRef} className="w-full h-full block" />
-      <button className="btn" onClick={() => idx < events.length - 1 && setIdx(idx + 1)}>▶ Continue</button>
+       <a href={homeHref} className="btn btn-home" aria-label="Back to home">◀ Home</a>
+      <button className="btn btn-right" onClick={() => idx < events.length - 1 && setIdx(idx + 1)}>▶ Continue</button>
 
       <div className="hud">
         <div className="title">{current.name || "Event"}</div>
