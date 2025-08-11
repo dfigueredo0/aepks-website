@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Recruitment Trail – Dev</title>
+  </head>
+  <body>
+    <!-- your existing nav here -->
+    <div id="dev"></div>
+    <script type="module">
+      import { mount } from "/src/entry.jsx";
+
+      const EVENTS = [
+        { id:"taste-of-the-quad", name:"Taste of the Quad", location:"Quad", dateTime:"TBD", type:"info" },
+        { id:"live-cellist", name:"Live Music Night", location:"Amphitheater", dateTime:"TBD", type:"info" },
+        { id:"darts-tournament", name:"Darts", location:"Rec Center", dateTime:"TBD", type:"minigame", minigame:"darts" },
+        { id:"last-stop", name:"The Last Stop", location:"House", dateTime:"TBD", type:"info" }
+      ];
+
+      mount(document.getElementById("dev"), { events: EVENTS });
+    </script>
+  </body>
+</html>
