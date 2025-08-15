@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-          name="description"
-          content="Contact page for Alpha Epsilon of Phi Kappa Sigma"
-        />
-    
-        <title>Alpha Epsilon of Phi Kappa Sigma</title>
-    
-        <!-- Standard ICO -->
-        <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
-    
-        <!-- PNG fallback -->
-        <link rel="icon" href="../img/favicon.png" type="image/png" sizes="256x256" />
-    
-        <link rel="stylesheet" href="../styles/header.css" />
-        <link rel="stylesheet" href="../styles/general.css" />
-        <link rel="stylesheet" href="../styles/text.css" />
-        <link rel="stylesheet" href="../styles/footer.css" />
-      </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact page for Alpha Epsilon of Phi Kappa Sigma"
+    />
 
-      <body>
-        <nav class="navbar">
-            <a class="logo">Logo Here</a>
-            <ul class="nav-links">
-              <li><a class="action" href="../index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="brothers.html">Brothers</a></li>
-              <li><a href="events.html">Events</a></li>
-              <li><a href="news.html">News</a></li>
-              <li><a href="contacts.html">Contacts</a></li>
-            </ul>
-          </nav>
+    <title>Alpha Epsilon of Phi Kappa Sigma</title>
 
-        <div>
-            <h3>Chapter Address</h3>
-            <p>Alpha Epsilon of Phi Kappa Sigma</p>
-            <p>3366 South Michigan Avenue</p>
-            <p>Chicago, IL 60616</p>
-        </div>
-        <div>
-            <h3>CONTACT UPSILON</h3>
-            <p>Please Contact the Upsilon Regarding Alumni Relations.</p>
-            <p>upsilon@aepks.org</p>
-        </div>
-        <div>
-            <h3>CONTACT EPSILON</h3>
-            <p>Please contact the Epsilon if you have any questions regarding the website.</p>
-            <p>epsilon@aepks.org</p>
-        </div>
-        <div>
-            <h3>CONTACT ALPHA</h3>
-            <p>Please contact the Alpha regarding questions about the chapter.</p>
-            <p>alpha@aepks.org</p>
-        </div>
-        <div>
-            <h3>CONTACT CHI</h3>
-            <p>Please contact the Chi for any questions regarding recruitment.</p>
-            <p>chi@aepks.org</p>
-        </div>
-      </body>
+    <!-- Standard ICO -->
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
 
+    <!-- PNG fallback -->
+    <link
+      rel="icon"
+      href="../img/favicon.png"
+      type="image/png"
+      sizes="256x256"
+    />
+  </head>
+
+  <body>
+    <div id="dither-root" class="dither-bg"></div>
+
+    <div id="site">
+      <nav class="navbar">
+        <a class="logo">Logo Here</a>
+        <ul class="nav-links">
+          <li><a class="action" href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="brothers.html">Brothers</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h3>Chapter Address</h3>
+        <p>Alpha Epsilon of Phi Kappa Sigma</p>
+        <p>3366 South Michigan Avenue</p>
+        <p>Chicago, IL 60616</p>
+      </div>
+      <div>
+        <h3>CONTACT UPSILON</h3>
+        <p>Please Contact the Upsilon Regarding Alumni Relations.</p>
+        <p>upsilon@aepks.org</p>
+      </div>
+      <div>
+        <h3>CONTACT EPSILON</h3>
+        <p>
+          Please contact the Epsilon if you have any questions regarding the
+          website.
+        </p>
+        <p>epsilon@aepks.org</p>
+      </div>
+      <div>
+        <h3>CONTACT ALPHA</h3>
+        <p>Please contact the Alpha regarding questions about the chapter.</p>
+        <p>alpha@aepks.org</p>
+      </div>
+      <div>
+        <h3>CONTACT CHI</h3>
+        <p>Please contact the Chi for any questions regarding recruitment.</p>
+        <p>chi@aepks.org</p>
+      </div>
       <section class="wave-divider">
         <svg
           preserveAspectRatio="none"
@@ -83,7 +87,7 @@
           />
         </svg>
       </section>
-    
+
       <footer>
         <div class="footer-content">
           <div class="footer-column">
@@ -108,7 +112,7 @@
               <li>Philanthropy</li>
             </ul>
           </div>
-    
+
           <div class="footer-column">
             <h3>Contact</h3>
             <ul>
@@ -134,4 +138,23 @@
           <p>&#169; Phi Kappa Sigma Fraternity. All rights reserved.</p>
         </div>
       </footer>
+    </div>
+
+    <script type="module" src="/src/entry.jsx"></script>
+
+    <script type="module">
+      import { mountDither } from "/src/entry.jsx";
+      mountDither(document.getElementById("dither-root"), {
+        waveColor: [0.7725, 0.6275, 0.4569],
+        disableAnimation: false,
+        enableMouseInteraction: true,
+        mouseRadius: 0.35,
+        colorNum: 40,
+        waveAmplitude: 0.45,
+        waveFrequency: 3,
+        waveSpeed: 0.05,
+        pixelSize: 2.0,
+      });
+    </script>
+  </body>
 </html>

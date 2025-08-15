@@ -1,5 +1,12 @@
+.dither-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none; /* so it doesn't eat clicks; set to auto if you want mouse input */
+}
+
 .dither-container {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  position: relative;
 }

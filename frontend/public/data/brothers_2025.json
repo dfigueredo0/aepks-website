@@ -1,0 +1,230 @@
+{
+  "actives": [
+    {
+      "lastname": "Messina",
+      "name": "Jacob",
+      "positions": ["Alpha"],
+      "major": "Chemical Engineering",
+      "classOf": "AE 2027",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Nagi",
+      "name": "Simon",
+      "positions": ["Beta"],
+      "major": "Architecture",
+      "classOf": "AE 2028",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Harmon",
+      "name": "Martin",
+      "positions": ["Pi", "Theta 1"],
+      "major": "Computer Engineering",
+      "classOf": "AE 2027",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Wilson",
+      "name": "Austin",
+      "positions": ["Iota"],
+      "major": "Biology",
+      "classOf": "AE 2027",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Austgen",
+      "name": "Kaleb",
+      "positions": ["Sigma"],
+      "major": "Cyber Security",
+      "classOf": "AE 2026",
+      "hasImg": "true"
+    },
+    {
+      "lastname": "Viswanathan",
+      "name": "Manoj",
+      "positions": ["Tau"],
+      "major": "Computer Science",
+      "classOf": "AE 2027",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Nicolas Ke",
+      "name": "Matias",
+      "positions": ["Chi"],
+      "major": "Architecture",
+      "classOf": "AE 2027",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Kenyeri",
+      "name": "Ronald",
+      "positions": ["Theta 2"],
+      "major": "Mechanical Engineering",
+      "classOf": "AE 2025",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Schneider",
+      "name": "Ronan",
+      "positions": ["Theta 3"],
+      "major": "Architecture",
+      "classOf": "AE 2025",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Boyne",
+      "name": "Toney",
+      "positions": ["Upsilon"],
+      "major": "ITM",
+      "classOf": "AE 2028",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Raghavan",
+      "name": "Bhuvan",
+      "positions": ["Phi"],
+      "major": "Chemical Engineering",
+      "classOf": "AE 2028",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Taylor",
+      "name": "Andre",
+      "positions": ["Psi"],
+      "major": "Architecture",
+      "classOf": "AE 2028",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Nakamura",
+      "name": "Marshall",
+      "positions": ["Gamma"],
+      "major": "Electrical Engineering",
+      "classOf": "AE 2026",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Figueredo",
+      "name": "Dylan",
+      "positions": ["Asst. Tau"],
+      "major": "Computer Science",
+      "classOf": "AE 2026",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Decroix",
+      "name": "Geoffroy",
+      "positions": ["Lambda"],
+      "major": "MMAE",
+      "classOf": "AE 2028",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Rajesh",
+      "name": "Ronal",
+      "positions": ["Epsilon"],
+      "major": "Cyber Security & Information Technology",
+      "classOf": "AE 2028",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Chouhan",
+      "name": "Yash Anand",
+      "positions": [],
+      "major": "Computer Science",
+      "classOf": "AE 2028",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Domas",
+      "name": "Corentin",
+      "positions": [],
+      "major": "Cybersecurity",
+      "classOf": "AE 2028",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Espinoza",
+      "name": "Pedro",
+      "positions": [],
+      "major": "Applied Cybersecurity",
+      "classOf": "AE 2025",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Geddam",
+      "name": "Siddharth",
+      "positions": [],
+      "major": "Computer Science",
+      "classOf": "AE 2028",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Kerecki",
+      "name": "Adrien",
+      "positions": [],
+      "major": "MMAE",
+      "classOf": "AE 2028",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Li",
+      "name": "Evan",
+      "positions": [],
+      "major": "Undeclared (ITM for now)",
+      "classOf": "AE 2028",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Medina",
+      "name": "David",
+      "positions": [],
+      "major": "Undeclared",
+      "classOf": "AE 2028",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Wangpo",
+      "name": "Thupten",
+      "positions": [],
+      "major": "Artificial Intelligence",
+      "classOf": "AE 2026",
+      "hasImg": "false"
+    }
+  ],
+  "advisors": [
+    {
+      "lastname": "Opicka",
+      "name": "Doug",
+      "positions": ["President"],
+      "major": "",
+      "classOf": "AE nan",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Doman",
+      "name": "Gary",
+      "positions": ["Asst. Chapter Advisor"],
+      "major": "",
+      "classOf": "AE nan",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Tringl",
+      "name": "Justin",
+      "positions": ["Chapter Advisor"],
+      "major": "",
+      "classOf": "AE nan",
+      "hasImg": "false"
+    },
+    {
+      "lastname": "Enriquez",
+      "name": "Jason ",
+      "positions": ["Resident Advisor"],
+      "major": "",
+      "classOf": "AE nan",
+      "hasImg": "false"
+    }
+  ]
+}

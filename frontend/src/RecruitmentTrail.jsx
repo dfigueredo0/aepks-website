@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./retro.css";
+import "./styles/retro.css";
 
 // Fetch simple weather label via Open-Meteo (no API key)
 async function getWeather({ lat, lon }) {
@@ -9,7 +9,13 @@ async function getWeather({ lat, lon }) {
     const j = await r.json();
     const temperature = Math.round(j?.current?.temperature_2m ?? NaN);
     const label = Number.isFinite(t)
-      ? temperature >= 85 ? "hot" : temperature >= 65 ? "warm" : temperature >= 45 ? "cool" : "cold"
+      ? temperature >= 85
+        ? "hot"
+        : temperature >= 65
+        ? "warm"
+        : temperature >= 45
+        ? "cool"
+        : "cold"
       : "fair";
     return Number.isFinite(t) ? `${label} (${t}°)` : label;
   } catch {
@@ -47,7 +53,9 @@ export default function RecruitmentTrail({
       return img;
     });
     let count = 0;
-    function done() { if (++count >= imgs.length) setLoaded(true); }
+    function done() {
+      if (++count >= imgs.length) setLoaded(true);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [JSON.stringify(sprites)]);
 
@@ -85,7 +93,8 @@ export default function RecruitmentTrail({
     let raf;
     function loop(now = 0) {
       const t = now / 1000;
-      const W = c.width, H = c.height;
+      const W = c.width,
+        H = c.height;
 
       // Sky background
       ctx.fillStyle = "#7ec0ff";
@@ -99,17 +108,26 @@ export default function RecruitmentTrail({
       tile(ctx, grass, W, H * 0.15, H * 0.45 - 10 * dpr, t * 20);
 
       // Ground
-      tile(ctx, ground, W, H * 0.25, H * 0.60, t * 60);
+      tile(ctx, ground, W, H * 0.25, H * 0.6, t * 60);
 
       // Actors (ox + wagon)
-      const scale = Math.max(1, Math.min(3, (W / dpr) / 600));
-      const oxW = 64 * dpr * scale, oxH = 48 * dpr * scale;
-      const wagW = 96 * dpr * scale, wagH = 64 * dpr * scale;
-      const baseY = H * 0.60 - 8 * dpr;
+      const scale = Math.max(1, Math.min(3, W / dpr / 600));
+      const oxW = 64 * dpr * scale,
+        oxH = 48 * dpr * scale;
+      const wagW = 96 * dpr * scale,
+        wagH = 64 * dpr * scale;
+      const baseY = H * 0.6 - 8 * dpr;
 
       ctx.imageSmoothingEnabled = false; // crisp pixels
       ox && ctx.drawImage(ox, W * 0.35, baseY - oxH, oxW, oxH);
-      wagon && ctx.drawImage(wagon, W * 0.35 + oxW + 8 * dpr, baseY - wagH, wagW, wagH);
+      wagon &&
+        ctx.drawImage(
+          wagon,
+          W * 0.35 + oxW + 8 * dpr,
+          baseY - wagH,
+          wagW,
+          wagH
+        );
 
       raf = requestAnimationFrame(loop);
     }
@@ -135,21 +153,42 @@ export default function RecruitmentTrail({
 
   const current = events[idx] || {};
   const next = events[idx + 1]?.name || "—";
-  const date = dateText || new Date().toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" });
+  const date =
+    dateText ||
+    new Date().toLocaleDateString(undefined, {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
 
   return (
     <div className="fullscreen retro">
       <canvas ref={canvasRef} className="w-full h-full block" />
-       <a href={homeHref} className="btn btn-home" aria-label="Back to home">◀ Home</a>
-      <button className="btn btn-right" onClick={() => idx < events.length - 1 && setIdx(idx + 1)}>▶ Continue</button>
+      <a href={homeHref} className="btn btn-home" aria-label="Back to home">
+        ◀ Home
+      </a>
+      <button
+        className="btn btn-right"
+        onClick={() => idx < events.length - 1 && setIdx(idx + 1)}
+      >
+        ▶ Continue
+      </button>
 
       <div className="hud">
         <div className="title">{current.name || "Event"}</div>
         <div className="grid">
-          <div><strong>Date:</strong> {date}</div>
-          <div><strong>Weather:</strong> {weather}</div>
-          <div><strong>Where:</strong> {current.location || "TBD"}</div>
-          <div><strong>Next landmark:</strong> {next}</div>
+          <div>
+            <strong>Date:</strong> {date}
+          </div>
+          <div>
+            <strong>Weather:</strong> {weather}
+          </div>
+          <div>
+            <strong>Where:</strong> {current.location || "TBD"}
+          </div>
+          <div>
+            <strong>Next landmark:</strong> {next}
+          </div>
         </div>
         {current.description ? (
           <div style={{ marginTop: 8 }}>{current.description}</div>

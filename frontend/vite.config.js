@@ -1,26 +1,21 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { resolve } from "path";
 
 export default defineConfig({
+  base: "/", // '/' for custom domain; set '/repo/' if GitHub subpath
   plugins: [react()],
-  base: "/", // custom domain root
-  define: {
-    "process.env.NODE_ENV": JSON.stringify("production"),
-    "process.env": {},         
-    global: "window",           
-  },
+  resolve: { alias: { "@": resolve(__dirname, "src") } },
   build: {
-    lib: {
-      entry: "src/entry.jsx",  
-      name: "RecruitmentTrail",
-      formats: ["iife", "es"],
-      fileName: (format) => `recruitment-trail.${format}.js`,
-    },
-    outDir: "../assets/recruitment",
-    emptyOutDir: true,
-    cssCodeSplit: false,
     rollupOptions: {
-      output: { assetFileNames: "recruitment-trail.css" },
+      input: {
+        main: resolve(__dirname, "index.html"),
+        about: resolve(__dirname, "pages/about.html"),
+        brothers: resolve(__dirname, "pages/brothers.html"),
+        events: resolve(__dirname, "pages/events.html"),
+        news: resolve(__dirname, "pages/news.html"),
+        contacts: resolve(__dirname, "pages/contacts.html"),
+      },
     },
   },
 });

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Events page for Alpha Epsilon of Phi Kappa Sigma"
+    />
+
+    <title>Alpha Epsilon of Phi Kappa Sigma - Events</title>
+
+    <!-- Standard ICO -->
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+
+    <!-- PNG fallback -->
+    <link rel="icon" href="/img/favicon.png" type="image/png" sizes="256x256" />
+  </head>
+  <body>
+    <div id="recruitment-trail"></div>
+    <div id="events-root"></div>
+    <script type="module" src="/src/entry.jsx"></script>
+  </body>
+  <script>
+    const EVENTS = [
+      {
+        id: "taste",
+        name: "Taste of the Quad",
+        description: "Pigs in a blanket…",
+        location: "Quad Lawn",
+        type: "info",
+      },
+      {
+        id: "cellist",
+        name: "Live Cellist",
+        description: "Chill set, meet brothers.",
+        location: "Amphitheater",
+        type: "info",
+      },
+      {
+        id: "darts",
+        name: "Darts Tournament",
+        description: "Hit ≥25 to proceed.",
+        location: "Rec Center",
+        type: "minigame",
+        minigame: "darts",
+      },
+      {
+        id: "zoo",
+        name: "Petting Zoo",
+        description: "Sloth, goat, bunnies, duck, chicken, tegu.",
+        location: "East Green",
+        type: "info",
+      },
+      {
+        id: "fair",
+        name: "Mini County Fair",
+        description: "Shooting gallery & horseshoes.",
+        location: "Intramural Fields",
+        type: "info",
+      },
+      {
+        id: "last",
+        name: "The Last Stop",
+        description: "Enter the house.",
+        location: "123 Greek Row",
+        type: "info",
+      },
+    ];
+
+    // pass lat/lon to show real weather
+    RecruitmentTrail.mount(document.getElementById("recruitment-trail"), {
+      events: EVENTS,
+      lat: 40.001,
+      lon: -83.016, // <-- your campus coords
+      sprites: {
+        sky: "/assets/recruitment/sprites/sky.png",
+        grass: "/assets/recruitment/sprites/grass.png",
+        ground: "/assets/recruitment/sprites/ground.png",
+        river: "/assets/recruitment/sprites/river.png",
+        wagon: "/assets/recruitment/sprites/wagon.png",
+        ox: "/assets/recruitment/sprites/ox.png",
+      },
+      // dateText: "April 4, 1848", // if you want the exact retro date
+    });
+  </script>
+</html>

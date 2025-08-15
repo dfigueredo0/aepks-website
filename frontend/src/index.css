@@ -1,3 +1,9 @@
+@import "./styles/header.css";
+@import "./styles/general.css";
+@import "./styles/text.css";
+@import "./styles/footer.css";
+@import "./styles/brothers.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
