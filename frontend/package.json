@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist -b gh-pages"
+    "deploy": "vite build && gh-pages -d dist -b gh-pages --cname aepks.org"
   },
   "dependencies": {
     "@react-three/fiber": "^9.3.0",
@@ -28,6 +28,7 @@
     "eslint": "^9.32.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
+    "gh-pages": "^6.3.0",
     "globals": "^16.3.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
