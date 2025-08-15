@@ -3,15 +3,17 @@ footer {
   color: #222222;
   margin-top: auto;
   padding: 20px;
+  display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 1em;
+  margin-top: 0.5em;
 }
 
 .footer-column {
@@ -27,10 +29,71 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  gap: 10px;
 }
 
-.footer-links a {
-  margin: 0 10px;
-  color: #f8f7f4;
+.footer-links {
+  color: #000000;
   text-decoration: none;
+  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.footer-links i {
+  margin-right: 5px;
+  vertical-align: middle;
+  font-size: inherit;
+  transition: color 0.5s ease, transform 0.5s ease;
+}
+
+.footer-links {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-links:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1em;
+  align-items: center;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon i {
+  vertical-align: middle;
+}
+
+i.fa-solid {
+  font-size: 20px;
+}
+
+i.fa-instagram {
+  font-size: 43px;
+}
+
+i.fa-facebook-f {
+  font-size: 40px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.footer-headings {
+  font-size: 22px;
+  font-weight: bold;
 }

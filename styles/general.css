@@ -383,7 +383,7 @@ li {
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   max-width: 100%;
   overflow: visible;
-  transition: border 0.3s ease, box-shadow 0.3 ease;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid transparent;
 }
 
@@ -631,7 +631,4 @@ li {
     width: 20%;
   }
 
-  i.fa-location-dot {
-    font-size: 18px;
-  }
 }
