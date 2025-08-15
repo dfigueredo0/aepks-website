@@ -1,0 +1,1 @@
+import{i as e,m as o}from"./entry-Df02LXqY.js";e();o(document.getElementById("dither-root"),{waveColor:[.7725,.6275,.4569],disableAnimation:!1,enableMouseInteraction:!0,mouseRadius:.35,colorNum:40,waveAmplitude:.45,waveFrequency:3,waveSpeed:.05,pixelSize:2});
