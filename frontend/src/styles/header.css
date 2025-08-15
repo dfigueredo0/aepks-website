@@ -28,21 +28,17 @@ body {
   margin: 0;
 }
 
-
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding:1em;
-  width: 32px;  /* or adjust as needed */
-  height: 32px;
+  padding: 0;
+  width: 35px;
 }
-
 .logo img {
   width: 35px;
   height: 35px;
 }
-
 
 .nav-links {
   display: flex;
