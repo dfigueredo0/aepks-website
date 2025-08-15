@@ -10,6 +10,12 @@
 
     <title>Alpha Epsilon of Phi Kappa Sigma</title>
 
+    <!-- footer icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
     <!-- Standard ICO -->
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
 
@@ -27,7 +33,8 @@
 
     <div id="site">
       <nav class="navbar">
-        <a class="logo">Logo Here</a>
+         <a class="logo" href="../index.html">
+            <img src="../img/fast_f_white.png" alt="logo" />
         <ul class="nav-links">
           <li><a class="action" href="../index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -37,6 +44,12 @@
           <li><a href="contacts.html">Contacts</a></li>
         </ul>
       </nav>
+
+              <section class="hero bg-1">
+          <div class="hero-overlay">
+            <div class="hero-title">About</div>
+          </div>
+        </section>
 
       <div>
         <h4>Scholarship</h4>
@@ -115,55 +128,59 @@
       </section>
 
       <footer>
-        <div class="footer-content">
-          <div class="footer-column">
-            <h3>PKS</h3>
-            <p>Phi Kappa Sigma Fraternity<br />Est. 1850</p>
-            <div>
-              <a href="https://www.facebook.com/aepks/" class="icon"
-                >Facebook</a
-              >
-              <a href="https://www.instagram.com/phikappasigmaiit/" class="icon"
-                >Instagram</a
-              >
-            </div>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3 class="footer-headings">PKS</h3>
+          <p class="name">Phi Kappa Sigma Fraternity<br />Est. 1850</p>
+          <div>
+            <a href="https://www.facebook.com/aepks/" class="icon footer-links" target="_blank">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/phikappasigmaiit/" class="icon footer-links" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
           </div>
-          <div class="footer-column">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="https://pks.org/">About Us</a></li>
-              <li>Rush Information</li>
-              <li>Chapter History</li>
-              <li>Alumni Relations</li>
-              <li>Philanthropy</li>
-            </ul>
-          </div>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-headings">Quick Links</h3>
+          <ul>
+            <li><a href="https://pks.org/" class="footer-links">About Us</a></li>
+            <li><a href="https://pks.org/prospects.php" class="footer-links">Rush Information class</a></li>
+            <li><a href="https://pks.org/culture.php" class="footer-links">Chapter History</a></li>
+            <li><a href="https://pks.org/alumni-associations.php" class="footer-links">Alumni Relations</a></li>
+            <li><a href="https://pks.org/community-service.php" class="footer-links">Philanthropy</a></li>
+          </ul>
+        </div>
 
-          <div class="footer-column">
-            <h3>Contact</h3>
-            <ul>
-              <li>
-                <i></i>
-                <!-- TODO: pointer loc icon -->
-                3366 S Michigan Ave<br />Chicago, IL 60616
-              </li>
-              <li>
-                <i></i>
-                <!-- TODO: phone icon -->
+        <div class="footer-column">
+          <h3 class="footer-headings">Contact</h3>
+          <ul class="footer-contact">
+            <li>
+              <a href="https://www.google.com/maps/place/3366+S+Michigan+Ave,+Chicago,+IL+60616"
+                 target="_blank" class="footer-links">
+                <i class="fa-solid fa-location-dot"></i>
+                3366 S Michigan Ave<br /> &nbsp; &nbsp; Chicago, IL 60616
+              </a>
+            </li>
+            <li>
+              <a href="tel:773-474-8293" class="footer-links">
+                <i class="fa-solid fa-phone"></i>
                 (773) 474-8293
-              </li>
-              <li>
-                <i></i>
-                <!-- TODO: mail icon -->
+              </a>
+            </li>
+            <li>
+              <a href="mailto:alpha@aepks.org" class="footer-links">
+                <i class="fa-solid fa-envelope"></i>
                 alpha@aepks.org
-              </li>
-            </ul>
-          </div>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="footer-bottom">
-          <p>&#169; Phi Kappa Sigma Fraternity. All rights reserved.</p>
-        </div>
-      </footer>
+      </div>
+      <div class="footer-bottom">
+        <p>&#169; Phi Kappa Sigma Fraternity. All rights reserved.</p>
+      </div>
+    </footer>
     </div>
 
     <script type="module" src="/src/entry.jsx"></script>
