@@ -1,18 +1,33 @@
 .navbar {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  right: 20px;
+
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
+
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   box-shadow: 0 0 30px rgba(227, 228, 237, 0.37);
   border: 2px solid rgba(255, 255, 255, 0.37);
-  margin: 20px;
-  padding: 0 1em;
-  position: absolute; /* Make it overlap */
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2; /* Ensure it is on top */
+  border-radius: 5px;
 }
+
+body {
+  margin: 0;
+  padding-top: 80px; /* Offset for navbar height + top spacing */
+}
+
+.hero {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
 
 .logo {
   display: flex;
@@ -48,4 +63,13 @@
 
 .nav-links li a:hover {
   color: #c6a434;
+}
+
+.color-transition {
+  transition: filter 0.5s ease;
+  filter: grayscale(0%) drop-shadow(0 0 0 transparent); /* base state */
+}
+
+.color-transition:hover {
+  filter: grayscale(0%) drop-shadow(3px 4px 1px black); /* hover state */
 }
