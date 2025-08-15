@@ -1,4 +1,193 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <script type="module" src="/src/entry.jsx"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="News page for Alpha Epsilon of Phi Kappa Sigma"
+    />
+    <title>Alpha Epsilon of Phi Kappa Sigma - News</title>
+
+    <!-- footer icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Standard ICO -->
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+
+    <!-- PNG fallback -->
+    <link
+      rel="icon"
+      href="../img/favicon.png"
+      type="image/png"
+      sizes="256x256"
+    />
+
+    <!-- Sticky footer: minimal, page-local -->
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+      }
+      /* Make the page a flex column that fills the viewport */
+      #site {
+        min-height: 100vh;
+        min-height: 100svh; /* better on mobile */
+        display: flex;
+        flex-direction: column;
+      }
+      /* Let the main content grow to push footer to the bottom */
+      .objects {
+        flex: 1 0 auto;
+      }
+      footer {
+        margin-top: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="dither-root" class="dither-bg"></div>
+
+    <div id="site">
+      <nav class="navbar">
+        <a class="logo" href="../index.html">
+          <img alt="Phi Kappa Sigma logo" src="../img/fast_f_white.png" />
+        </a>
+        <ul class="nav-links">
+          <li><a class="action" href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="brothers.html">Brothers</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <section class="objects" style="border-top: none; border-bottom: none">
+        <div
+          class="container"
+          style="flex-direction: column; text-align: center; padding: 60px 20px"
+        >
+          <div class="hero-overlay">
+            <div class="hero-title">Coming Soon</div>
+          </div>
+          <p style="max-width: 700px">
+            We're building out our News section. Check back soon for chapter
+            updates, events, and spotlights.
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3 class="footer-headings">PKS</h3>
+            <p class="name">Phi Kappa Sigma Fraternity<br />Est. 1850</p>
+            <div>
+              <a
+                class="icon footer-links"
+                href="https://www.facebook.com/aepks/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                class="icon footer-links"
+                href="https://www.instagram.com/phikappasigmaiit/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-headings">Quick Links</h3>
+            <ul>
+              <li>
+                <a class="footer-links" href="https://pks.org/">About Us</a>
+              </li>
+              <li>
+                <a class="footer-links" href="https://pks.org/prospects.php"
+                  >Rush Information class</a
+                >
+              </li>
+              <li>
+                <a class="footer-links" href="https://pks.org/culture.php"
+                  >Chapter History</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer-links"
+                  href="https://pks.org/alumni-associations.php"
+                  >Alumni Relations</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer-links"
+                  href="https://pks.org/community-service.php"
+                  >Philanthropy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-headings">Contact</h3>
+            <ul class="footer-contact">
+              <li>
+                <a
+                  class="footer-links"
+                  href="https://www.google.com/maps/place/3366+S+Michigan+Ave,+Chicago,+IL+60616"
+                  target="_blank"
+                >
+                  <i class="fa-solid fa-location-dot"></i>
+                  3366 S Michigan Ave<br />
+                  Chicago, IL 60616
+                </a>
+              </li>
+              <li>
+                <a class="footer-links" href="tel:773-474-8293">
+                  <i class="fa-solid fa-phone"></i>
+                  (773) 474-8293
+                </a>
+              </li>
+              <li>
+                <a class="footer-links" href="mailto:alpha@aepks.org">
+                  <i class="fa-solid fa-envelope"></i>
+                  alpha@aepks.org
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© Phi Kappa Sigma Fraternity. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/entry.jsx"></script>
+    <script type="module">
+      import { mountDither } from "/src/entry.jsx";
+      mountDither(document.getElementById("dither-root"), {
+        waveColor: [0.7725, 0.6275, 0.4569],
+        disableAnimation: false,
+        enableMouseInteraction: true,
+        mouseRadius: 0.35,
+        colorNum: 40,
+        waveAmplitude: 0.45,
+        waveFrequency: 3,
+        waveSpeed: 0.05,
+        pixelSize: 2.0,
+      });
+    </script>
+  </body>
 </html>
